@@ -1,20 +1,15 @@
 import React from 'react';
 import '../css/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import img from './media/product.destacado1.jpg';
+import img from '../../assets/product.destacado1.jpg';
+import ItemCount from '../ItemCount/ItemCount'; 
+import ItemList from '../Item/ItemList';
 
 
-const ItemListContainer = (greeting) => {
+const ItemListContainer = () => {
     return (
-        <div className="cardTotal">
-            <div class="cardProducto">    
-                <div className="card-body">
-                    <img src={img} className="imagenes_productos"></img>
-                    <h5 className="card-title">{greeting.title}</h5>
-                    <p className="card-text">{greeting.parrafo}</p>
-                    <a href="#" className="btnGral">Comprar</a>
-                </div>
-            </div>
+        <div >
+            <ItemList />
         </div>
     )
 }
