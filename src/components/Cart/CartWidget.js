@@ -3,7 +3,7 @@ import img from './carrito.png'
 const CartWidget = () => {
     return (
         <div>
-            <img src={img} alt="logoCarro" height="30px"></img>
+           <a href="#"> <img src={img} alt="logoCarro" height="30px" ></img> </a>
         </div>
     )
 }

@@ -1,0 +1,18 @@
+.buttonCount {
+  border: none;
+  font-size: 25px;
+}
+
+.countGral {
+  width: 60%;
+  margin: auto;
+  border-bottom: 1px solid #010101;
+}
+
+#buttonUp {
+  color: green;
+}
+
+#buttonDown {
+  color: red;
+}
