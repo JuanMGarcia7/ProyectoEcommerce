@@ -1,11 +1,14 @@
-import React from 'react'
-import img from './carrito.png'
+import React from "react";
+import img from "./carritoSinFondo.png";
 const CartWidget = () => {
-    return (
-        <div>
-           <a href="#"> <img src={img} alt="logoCarro" height="30px" ></img> </a>
-        </div>
-    )
-}
+  return (
+    <div>
+      <a href="#">
+        {" "}
+        <img src={img} alt="logoCarro" height="40px"></img>{" "}
+      </a>
+    </div>
+  );
+};
 
-export default CartWidget
+export default CartWidget;
