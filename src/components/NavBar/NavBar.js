@@ -7,7 +7,7 @@ import "./NavBar.css";
 const NavBar = () => {
   return (
     <div>
-      <div>
+      <div className="navBarTotal">
         <ul>
           <div className="barraNav">
             <Link to="/" className="navegables navs">
