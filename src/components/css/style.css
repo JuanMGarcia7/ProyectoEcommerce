@@ -1,6 +1,7 @@
 .cardTotal {
   margin-top: 5%;
   width: 33%;
+  min-height: 800px;
   display: flex;
   float: left;
   justify-content: center;

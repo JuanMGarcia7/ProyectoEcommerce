@@ -1,33 +1,30 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
-import CartWidget from '../Cart/CartWidget';
+import "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
+import CartWidget from "../Cart/CartWidget";
+import { Link } from "react-router-dom";
+import "./NavBar.css";
 
-
-function NavBar() {
+const NavBar = () => {
   return (
     <div>
-       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="#">Magnoliah Design</a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">Inicio</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Productos</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Nosotros </a>
-            </li>
-          </ul>
-          <CartWidget />
-        </div>
-      </nav>
+      <div>
+        <ul>
+          <div className="barraNav">
+            <Link to="/" className="navegables navs">
+              Home
+            </Link>
+            <Link to="/catalogo" className="navegables navs">
+              Catalogo
+            </Link>
+            <Link to="/nosotros" className="navegables navs">
+              Nosotros
+            </Link>
+            <CartWidget className="navegables navs" />
+          </div>
+        </ul>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default NavBar;
