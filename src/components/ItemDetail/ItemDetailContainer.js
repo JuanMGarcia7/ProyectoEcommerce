@@ -4,7 +4,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import { Image } from "semantic-ui-react";
 import "./ItemDetail.css";
 
-const ItemDetail = ({ match }) => {
+const ItemDetailContainer = ({ match }) => {
   let itemID = match.params.id;
   const [item, setItem] = useState([]);
 
@@ -41,12 +41,4 @@ const ItemDetail = ({ match }) => {
   );
 };
 
-export default ItemDetail;
-
-/* {Object.keys(item).map((item) => {
-  return (
-    <div key={item}>
-      <Item data={item} />
-    </div>
-  );
-})} */
+export default ItemDetailContainer;

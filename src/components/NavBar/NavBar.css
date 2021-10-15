@@ -12,6 +12,9 @@
   width: 80%;
   align-items: center;
 }
+.imgLogo {
+  width: 15%;
+}
 .navegables {
   display: flex;
   margin: auto;
@@ -33,4 +36,8 @@
 .navs:hover {
   transform: scale(1.1);
   color: grey;
+}
+
+.Cart {
+  padding-top: 15%;
 }

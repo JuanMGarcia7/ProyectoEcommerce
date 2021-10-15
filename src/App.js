@@ -4,10 +4,12 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 //Views
-import Home from "./components/Views/Home";
-import Catalogo from "./components/Views/Catalogo";
+/* import Home from "./components/Views/Home";
+import Catalogo from "./components/Views/Catalogo";*/
 import Nosotros from "./components/Views/Nosotros";
-import ItemDetail from "./components/ItemDetail/ItemDetail";
+import ListContainer from "./components/ListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer";
+import ItemListContainer from "./components/ListContainer/ItemListContainer";
 
 const App = () => {
   return (
@@ -16,10 +18,10 @@ const App = () => {
         <div>
           <NavBar />
           <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/catalogo" component={Catalogo} />
+            <Route path="/" exact component={ItemListContainer} />
+            <Route path="/category/:id" component={ItemListContainer} />
             <Route path="/nosotros" component={Nosotros} />
-            <Route path="/ItemDetail/:id" component={ItemDetail} />
+            <Route path="/Item/:id" component={ItemDetailContainer} />
           </Switch>
         </div>
       </div>
