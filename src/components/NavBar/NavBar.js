@@ -3,6 +3,8 @@ import React from "react";
 import CartWidget from "../Cart/CartWidget";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
+import { Image } from "semantic-ui-react";
+import logoNav from "../../assets/logoNav.png";
 
 const NavBar = () => {
   return (
@@ -10,16 +12,19 @@ const NavBar = () => {
       <div className="navBarTotal">
         <ul>
           <div className="barraNav">
+            <Link to="/">
+              <Image src={logoNav} className="imgLogo" />
+            </Link>
             <Link to="/" className="navegables navs">
               Home
             </Link>
-            <Link to="/catalogo" className="navegables navs">
+            <Link to="/category/:id" className="navegables navs">
               Catalogo
             </Link>
             <Link to="/nosotros" className="navegables navs">
               Nosotros
             </Link>
-            <CartWidget className="navegables navs" />
+            <CartWidget />
           </div>
         </ul>
       </div>

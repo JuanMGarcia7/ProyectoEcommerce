@@ -3,6 +3,7 @@ import Item from "./Item";
 import Spinner from "../Spinner/Spinner";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import "./itemList.css";
 
 const ItemList = () => {
   const [items, setItems] = useState([]);
@@ -19,11 +20,11 @@ const ItemList = () => {
 
   return (
     <div>
-      <h1>ITEMS</h1>
+      <h1 className="tituloPrincipal"> New arrivals!</h1>
       {items.map((item) => {
         return (
           <div key={item.id}>
-            <Link to={`/ItemDetail/${item.id}`}>
+            <Link to={`/Item/${item.id}`}>
               {isLoading ? <Spinner /> : <Item data={item} />}
             </Link>
           </div>

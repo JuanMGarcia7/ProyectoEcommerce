@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
 .cardTotal {
   margin-top: 5%;
   width: 33%;
@@ -50,4 +52,19 @@
   font-weight: 300;
   text-decoration: none;
   transform: scale(1.1);
+}
+
+.logoNosotros {
+  width: 30%;
+  margin: auto;
+  padding-top: 3%;
+}
+
+.parrafNosotros {
+  font-size: 1.5rem;
+  width: 80%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin: auto;
+  padding-top: 3%;
 }
