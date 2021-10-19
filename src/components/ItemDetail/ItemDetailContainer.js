@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Item from "../Item/Item";
 import ItemCount from "../ItemCount/ItemCount";
 import { Image } from "semantic-ui-react";
 import "./ItemDetail.css";
+import { Link } from "react-router-dom";
 
 const ItemDetailContainer = ({ match }) => {
   let itemID = match.params.id;
@@ -13,6 +13,7 @@ const ItemDetailContainer = ({ match }) => {
       .then((response) => response.json())
       .then((data) => setItem(data));
   });
+
   return (
     <div>
       <div>
@@ -32,9 +33,9 @@ const ItemDetailContainer = ({ match }) => {
         </div>
         <div className="cardFoot">
           <ItemCount />
-          <a href="#" className="btnGral">
-            Comprar
-          </a>
+          <Link className="btnGral" to="/cart">
+            Finalizar compra
+          </Link>
         </div>
       </div>
     </div>

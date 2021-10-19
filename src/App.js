@@ -2,6 +2,7 @@ import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Cart from "./components/Cart/Cart";
 
 //Views
 /* import Home from "./components/Views/Home";
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/category/:id" component={ItemListContainer} />
             <Route path="/nosotros" component={Nosotros} />
             <Route path="/Item/:id" component={ItemDetailContainer} />
+            <Route path="/cart" component={Cart} />
           </Switch>
         </div>
       </div>

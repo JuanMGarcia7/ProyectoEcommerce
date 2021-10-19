@@ -13,8 +13,6 @@ const Item = ({ data }) => {
             <div>{data.title}</div>
             <div>{data.price}</div>
 
-            <ItemCount />
-
             <a href="#" className="btnGral">
               Comprar
             </a>
