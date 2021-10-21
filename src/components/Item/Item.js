@@ -1,5 +1,4 @@
 import React from "react";
-import ItemCount from "../ItemCount/ItemCount";
 import { Image } from "semantic-ui-react";
 
 const Item = ({ data }) => {
