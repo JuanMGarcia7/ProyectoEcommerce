@@ -1,5 +1,6 @@
 import React from "react";
 import { Image } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 const Item = ({ data }) => {
   return (
@@ -11,10 +12,11 @@ const Item = ({ data }) => {
             <div>{data.id}</div>
             <div>{data.title}</div>
             <div>{data.price}</div>
-
-            <a href="#" className="btnGral">
-              Comprar
-            </a>
+            <Link to="/cart">
+              <a href="#" className="btnGral">
+                Comprar
+              </a>
+            </Link>
           </div>
         </div>
       </div>

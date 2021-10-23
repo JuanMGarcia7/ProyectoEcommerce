@@ -1,0 +1,26 @@
+.tableCart {
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.tdCart {
+  border: 1px solid black;
+  margin: 3%;
+  width: 20%;
+  padding-right: 2%;
+  align-items: center;
+}
+
+.carroVacio {
+  display: flex;
+  margin: auto;
+  width: 40%;
+  border-bottom: 1px solid #010101;
+  padding-bottom: 1%;
+  justify-content: center;
+  padding-top: 3%;
+  margin-top: 2.5%;
+  margin-bottom: 1.5%;
+  font-size: 25px;
+}

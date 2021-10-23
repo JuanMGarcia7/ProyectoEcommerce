@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar/NavBar";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Cart from "./components/Cart/Cart";
-import { CartProvider } from "./components/Cart/CartContext";
+import { CartProvider } from "./components/Context/CartContext";
 
 //Views
 /* import Home from "./components/Views/Home";
