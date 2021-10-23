@@ -1,14 +1,15 @@
-//juan
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import { Image } from "semantic-ui-react";
 import "./ItemDetail.css";
 import { Link } from "react-router-dom";
+import CartContext from "../Context/CartContext";
 
 const ItemDetailContainer = ({ match }) => {
   let itemID = match.params.id;
   const [item, setItem] = useState([]);
   const [cantidadDeItems, setCantidadDeItems] = useState(1);
+  const [cart, setCart] = useContext(CartContext);
 
   const counterHandler = (counter) => {
     setCantidadDeItems(counter);
@@ -19,6 +20,32 @@ const ItemDetailContainer = ({ match }) => {
       .then((response) => response.json())
       .then((data) => setItem(data));
   });
+
+  const quitIC = () => {
+    let contador = document.getElementById("countGeneral");
+    contador.parentNode.removeChild(contador);
+
+    let buttonAgrCarrito = document.getElementById("agrCarrito");
+    buttonAgrCarrito.parentNode.removeChild(buttonAgrCarrito);
+  };
+
+  const addTooCart = () => {
+    const idem = cart.find((i) => i.id === itemID.id);
+    if (idem) {
+      idem.cantidadDeItems += cantidadDeItems;
+      setCart([...cart]);
+    } else {
+      setCart([
+        ...cart,
+        {
+          cantidadDeItems: cantidadDeItems,
+          item: item.id,
+          itemTitle: item.title,
+          price: item.price,
+        },
+      ]);
+    }
+  };
 
   return (
     <div>
@@ -33,7 +60,6 @@ const ItemDetailContainer = ({ match }) => {
             <div className="cardContent">
               <div className="itemsContent">{item.id}</div>
               <div className="itemsContent">{item.title}</div>
-
               <div className="itemsContent"> {item.description}</div>
               <div className="itemsContent">
                 {""}
@@ -43,9 +69,15 @@ const ItemDetailContainer = ({ match }) => {
             </div>
           </div>
         </div>
+        <div>
+          <button className="btnGral" id="agrCarrito" onClick={quitIC}>
+            {" "}
+            Agregar al carrito
+          </button>
+        </div>
         <div className="cardFoot">
           <ItemCount stock={5} initialValue={1} onAdd={counterHandler} />
-          <Link className="btnGral" to="/cart">
+          <Link className="btnGral" to="/cart" onClick={addTooCart}>
             Finalizar compra
           </Link>
         </div>

@@ -28,14 +28,6 @@ const ItemCount = ({ stock, initialValue, onAdd }) => {
     }
   };
 
-  const addToCart = () => {
-    let contador = document.getElementById("countGeneral");
-    contador.parentNode.removeChild(contador);
-
-    let buttonAgrCarrito = document.getElementById("agrCarrito");
-    buttonAgrCarrito.parentNode.removeChild(buttonAgrCarrito);
-  };
-
   return (
     <div className="countGral">
       <div id="countGeneral">
@@ -51,14 +43,27 @@ const ItemCount = ({ stock, initialValue, onAdd }) => {
           +
         </button>
       </div>
-      <div>
-        <button className="btnGral" id="agrCarrito" onClick={addToCart}>
-          {" "}
-          Agregar al carrito
-        </button>
-      </div>
     </div>
   );
 };
 
 export default ItemCount;
+
+// quitar counter, fue para un tp
+/* const quitIC = () => {
+  let contador = document.getElementById("countGeneral");
+  contador.parentNode.removeChild(contador);
+
+  let buttonAgrCarrito = document.getElementById("agrCarrito");
+  buttonAgrCarrito.parentNode.removeChild(buttonAgrCarrito);
+}; 
+
+
+
+<div>
+        <button className="btnGral" id="agrCarrito" onClick={quitIC}>
+          {" "}
+          Agregar al carrito
+        </button>
+      </div>
+      */
