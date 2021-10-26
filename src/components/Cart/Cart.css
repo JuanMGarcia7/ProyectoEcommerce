@@ -7,7 +7,7 @@
 .tdCart {
   border: 1px solid black;
   margin: 3%;
-  width: 20%;
+  width: 20rem;
   padding-right: 2%;
   align-items: center;
 }
@@ -23,4 +23,22 @@
   margin-top: 2.5%;
   margin-bottom: 1.5%;
   font-size: 25px;
+}
+
+.btnEliminar {
+  text-decoration: none;
+  height: 50px;
+  width: 10rem;
+  justify-content: center;
+  color: #010101;
+  background-color: grey;
+  display: flex;
+  margin: auto;
+  padding: 1%;
+  margin-bottom: 3%;
+  border-radius: 10px;
+  border: 1px solid black;
+  outline: none;
+  margin-top: 3%;
+  align-items: center;
 }
