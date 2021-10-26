@@ -24,7 +24,9 @@ const NavBar = () => {
             <Link to="/nosotros" className="navegables navs">
               Nosotros
             </Link>
-            <CartWidget />
+            <Link to="/cart">
+              <CartWidget />
+            </Link>
           </div>
         </ul>
       </div>

@@ -21,16 +21,16 @@ const ItemDetailContainer = ({ match }) => {
       .then((data) => setItem(data));
   });
 
-  const quitIC = () => {
+  /* const quitIC = () => {
     let contador = document.getElementById("countGeneral");
     contador.parentNode.removeChild(contador);
 
     let buttonAgrCarrito = document.getElementById("agrCarrito");
     buttonAgrCarrito.parentNode.removeChild(buttonAgrCarrito);
-  };
+  }; */
 
   const addTooCart = () => {
-    const idem = cart.find((i) => i.id === itemID.id);
+    const idem = cart.find((i) => i.item === item.id);
     if (idem) {
       idem.cantidadDeItems += cantidadDeItems;
       setCart([...cart]);
@@ -49,7 +49,10 @@ const ItemDetailContainer = ({ match }) => {
 
   return (
     <div>
-      <h1> {cantidadDeItems} </h1>
+      <h1 className="titlGeneral"> Detalle del producto </h1>
+      <Link to="/">
+        <div className="volverList">Volver al listado</div>
+      </Link>
       <div>
         <div className="cardTotalDetail">
           <div className="cardProductoDetail">
@@ -70,14 +73,14 @@ const ItemDetailContainer = ({ match }) => {
           </div>
         </div>
         <div>
-          <button className="btnGral" id="agrCarrito" onClick={quitIC}>
+          <button className="btnGral" id="agrCarrito" onClick={addTooCart}>
             {" "}
             Agregar al carrito
           </button>
         </div>
         <div className="cardFoot">
           <ItemCount stock={5} initialValue={1} onAdd={counterHandler} />
-          <Link className="btnGral" to="/cart" onClick={addTooCart}>
+          <Link className="btnGral" to="/cart">
             Finalizar compra
           </Link>
         </div>

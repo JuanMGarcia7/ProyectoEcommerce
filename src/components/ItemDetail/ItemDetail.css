@@ -9,6 +9,10 @@
 .cardProductoDetail {
   display: flex;
 }
+.titlGeneral {
+  font-size: 26px;
+  padding-top: 1%;
+}
 .cardContent {
   flex-direction: row;
   padding-top: 5%;
@@ -28,4 +32,12 @@
 
 .cardFoot {
   padding-bottom: 5%;
+}
+
+.volverList {
+  font-size: 22px;
+  color: black;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.5%;
+  width: 10%;
 }
