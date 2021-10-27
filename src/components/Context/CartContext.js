@@ -3,10 +3,10 @@ import React, { createContext, useState } from "react";
 const CartContext = createContext([]);
 
 export const CartProvider = ({ children }) => {
-  const [carrito, setCarrito] = useState([]);
+  const [cart, setCart] = useState([]);
 
   return (
-    <CartContext.Provider value={[carrito, setCarrito]}>
+    <CartContext.Provider value={[cart, setCart]}>
       {children}
     </CartContext.Provider>
   );

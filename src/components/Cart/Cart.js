@@ -21,6 +21,9 @@ const Cart = () => {
     setCart([]);
   };
 
+  const getGrandTotal = () => {
+    return cart.reduce((acc, item) => (acc += item.price), 0);
+  };
   return (
     <div>
       <div>
@@ -43,6 +46,7 @@ const Cart = () => {
           </tr>
         </div>
       ))}
+      <div className="totalPrice">Precio Total: ${getGrandTotal()}</div>
       <div>
         {cart.length > 0 ? (
           <button onClick={clearCart} className="btnEliminar">

@@ -41,3 +41,10 @@
 .Cart {
   padding-top: 15%;
 }
+.itemNum {
+  color: #010101;
+  border-radius: 40%;
+  background-color: white;
+  width: 30%;
+  align-items: center;
+}

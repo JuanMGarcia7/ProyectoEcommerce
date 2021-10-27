@@ -33,6 +33,7 @@ const ItemDetailContainer = ({ match }) => {
     const idem = cart.find((i) => i.item === item.id);
     if (idem) {
       idem.cantidadDeItems += cantidadDeItems;
+      idem.price += item.price * cantidadDeItems;
       setCart([...cart]);
     } else {
       setCart([
@@ -41,7 +42,7 @@ const ItemDetailContainer = ({ match }) => {
           cantidadDeItems: cantidadDeItems,
           item: item.id,
           itemTitle: item.title,
-          price: item.price,
+          price: item.price * cantidadDeItems,
         },
       ]);
     }
