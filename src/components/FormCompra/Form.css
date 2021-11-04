@@ -1,0 +1,21 @@
+.formTotal {
+  width: 60%;
+  margin: auto;
+  margin-top: 3%;
+  border: 1px solid grey;
+  background-image: url("https://previews.123rf.com/images/yakotina/yakotina1503/yakotina150300082/37826932-modelo-geom%C3%A9trico-incons%C3%BAtil-con-diferentes-tri%C3%A1ngulos-de-colores-fondo-simple-.jpg");
+}
+
+.formGeneral {
+  font-size: 20px;
+  padding: 2%;
+}
+.formInput {
+  outline: none;
+  box-shadow: none;
+  border: 1px solid #010101;
+  min-width: 500px;
+  padding-left: 3%;
+  display: flex;
+  margin: auto;
+}
