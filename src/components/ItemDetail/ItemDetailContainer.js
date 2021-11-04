@@ -4,6 +4,8 @@ import { Image } from "semantic-ui-react";
 import "./ItemDetail.css";
 import { Link } from "react-router-dom";
 import CartContext from "../Context/CartContext";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase";
 
 const ItemDetailContainer = ({ match }) => {
   let itemID = match.params.id;
@@ -15,19 +17,24 @@ const ItemDetailContainer = ({ match }) => {
     setCantidadDeItems(counter);
   };
 
-  useEffect(() => {
-    fetch(`https://fakestoreapi.com/products/${itemID}`)
+  /*    useEffect(() => {
+    fetch(`https://console.firebase.google.com/project/e-commerce-fbb03/firestore/data/~2FProducts~2F${itemID}`)
       .then((response) => response.json())
       .then((data) => setItem(data));
+  }); */
+  useEffect(() => {
+    const getItem = async () => {
+      const docRef = doc(db, "Products", itemID);
+      const docSnap = await getDoc(docRef);
+
+      if (docSnap.exists()) {
+        setItem({ ...docSnap.data(), id: docSnap.id });
+      } else {
+        console.log("no esta!");
+      }
+    };
+    getItem();
   });
-
-  /* const quitIC = () => {
-    let contador = document.getElementById("countGeneral");
-    contador.parentNode.removeChild(contador);
-
-    let buttonAgrCarrito = document.getElementById("agrCarrito");
-    buttonAgrCarrito.parentNode.removeChild(buttonAgrCarrito);
-  }; */
 
   const addTooCart = () => {
     const idem = cart.find((i) => i.item === item.id);
@@ -41,7 +48,7 @@ const ItemDetailContainer = ({ match }) => {
         {
           cantidadDeItems: cantidadDeItems,
           item: item.id,
-          itemTitle: item.title,
+          itemName: item.name,
           price: item.price * cantidadDeItems,
         },
       ]);
@@ -58,13 +65,13 @@ const ItemDetailContainer = ({ match }) => {
         <div className="cardTotalDetail">
           <div className="cardProductoDetail">
             <div className="containerImg">
-              <Image className="imagenes_productos-detail" src={item.image} />
+              <Image className="imagenes_productos-detail" src={item.img} />
             </div>
 
             <div className="cardContent">
-              <div className="itemsContent">{item.id}</div>
-              <div className="itemsContent">{item.title}</div>
-              <div className="itemsContent"> {item.description}</div>
+              <div className="itemsContent"> ID: {item.id}</div>
+              <div className="itemsContent">Nombre: {item.name}</div>
+              <div className="itemsContent"> Disponibles: {item.stock}</div>
               <div className="itemsContent">
                 {""}
                 Precio: u$s {item.price * cantidadDeItems} por {cantidadDeItems}{" "}

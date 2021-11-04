@@ -3,7 +3,7 @@
 .cardTotal {
   margin-top: 5%;
   width: 33%;
-  min-height: 800px;
+  min-height: 300px;
   display: flex;
   float: left;
   justify-content: center;
@@ -59,7 +59,17 @@
   margin: auto;
   padding-top: 3%;
 }
-
+.tituloPrincipal {
+  display: flex;
+  margin: auto;
+  width: 40%;
+  border-bottom: 1px solid #010101;
+  padding-bottom: 1%;
+  justify-content: center;
+  padding-top: 3%;
+  margin-top: 2.5%;
+  margin-bottom: 1.5%;
+}
 .parrafNosotros {
   font-size: 1.5rem;
   width: 80%;
@@ -67,4 +77,12 @@
   font-weight: 400;
   margin: auto;
   padding-top: 3%;
+}
+.opcionesCategories {
+  font-size: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: black;
+  margin-top: 7%;
 }

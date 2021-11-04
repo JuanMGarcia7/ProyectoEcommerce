@@ -3,6 +3,7 @@ import CartContext from "../Context/CartContext";
 import { Table } from "semantic-ui-react";
 import "./Cart.css";
 import { Link } from "react-router-dom";
+import FormCompra from "../FormCompra/FormCompra";
 const Cart = () => {
   const [cart, setCart] = useContext(CartContext);
 
@@ -24,6 +25,8 @@ const Cart = () => {
   const getGrandTotal = () => {
     return cart.reduce((acc, item) => (acc += item.price), 0);
   };
+
+  console.log(cart);
   return (
     <div>
       <div>
@@ -37,7 +40,7 @@ const Cart = () => {
         <div key={cart.id} className="tableCart">
           <tr>
             <td className="tdCart">ID: {item.item} </td>
-            <td className="tdCart">Producto: {item.itemTitle}</td>
+            <td className="tdCart">Producto: {item.itemName}</td>
             <td className="tdCart">Cantidad: {item.cantidadDeItems}</td>
             <td className="tdCart"> Precio: u$s{item.price}</td>
             <button onClick={elminarItem} className="tdCart btnEliminar">
@@ -57,6 +60,10 @@ const Cart = () => {
             <div>Volver al listado</div>
           </Link>
         )}
+      </div>
+      <div>{cart.length <= 0 ? null : <FormCompra />}</div>
+      <div>
+        <button className="btnEliminar">Comprar!</button>
       </div>
     </div>
   );

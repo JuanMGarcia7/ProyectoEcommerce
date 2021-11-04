@@ -8,9 +8,9 @@ const Item = ({ data }) => {
       <div className="cardTotal">
         <div className="cardProducto">
           <div className="card-body">
-            <Image className="imagenes_productos" src={data.image} />
+            <Image className="imagenes_productos" src={data.img} />
             <div>{data.id}</div>
-            <div>{data.title}</div>
+            <div>{data.name}</div>
             <div>{data.price}</div>
             <Link to="/cart">
               <a href="#" className="btnGral">
