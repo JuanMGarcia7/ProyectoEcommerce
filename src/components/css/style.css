@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-
+* {
+  margin: 0;
+  padding: 0;
+}
 .cardTotal {
   margin-top: 5%;
-  width: 33%;
-  min-height: 300px;
+  width: 30%;
+  min-height: 514px;
   display: flex;
   float: left;
   justify-content: center;
@@ -85,4 +88,7 @@
   justify-content: center;
   color: black;
   margin-top: 7%;
+}
+.opcionesCategories:hover {
+  color: rgb(158, 154, 154);
 }
