@@ -57,14 +57,14 @@ const Cart = () => {
           </button>
         ) : (
           <Link to="/">
-            <div>Volver al listado</div>
+            <div className="backCart">Volver al listado</div>
           </Link>
         )}
       </div>
       <div>{cart.length <= 0 ? null : <FormCompra />}</div>
-      <div>
+      {/*  <div>
         <button className="btnEliminar">Comprar!</button>
-      </div>
+      </div> */}
     </div>
   );
 };

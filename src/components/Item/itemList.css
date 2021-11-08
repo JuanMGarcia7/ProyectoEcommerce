@@ -9,3 +9,12 @@
   margin-top: 2.5%;
   margin-bottom: 1.5%;
 }
+
+.cardsContainer {
+  width: 100%;
+  margin: auto;
+}
+
+.cardDescrip {
+  color: black;
+}

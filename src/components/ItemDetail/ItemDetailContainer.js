@@ -17,11 +17,6 @@ const ItemDetailContainer = ({ match }) => {
     setCantidadDeItems(counter);
   };
 
-  /*    useEffect(() => {
-    fetch(`https://console.firebase.google.com/project/e-commerce-fbb03/firestore/data/~2FProducts~2F${itemID}`)
-      .then((response) => response.json())
-      .then((data) => setItem(data));
-  }); */
   useEffect(() => {
     const getItem = async () => {
       const docRef = doc(db, "Products", itemID);

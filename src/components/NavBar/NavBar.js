@@ -39,7 +39,9 @@ const NavBar = () => {
               toggle={abrirCerrarDrop}
               className="navegables navs dropdown"
             >
-              <DropdownToggle caret>Categorias</DropdownToggle>
+              <DropdownToggle caret className="catDrop">
+                Categorias
+              </DropdownToggle>
               <DropdownMenu>
                 <DropdownItem>
                   {" "}

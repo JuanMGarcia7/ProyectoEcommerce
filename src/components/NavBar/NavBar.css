@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 .navBarTotal {
-  background-color: khaki;
+  background-color: rgb(69, 76, 83);
   height: 70px;
 }
 .barraNav {
@@ -47,4 +47,10 @@
   background-color: white;
   width: 30%;
   align-items: center;
+}
+
+.catDrop {
+  color: #010101;
+  font-weight: 500;
+  font-size: 1.5rem;
 }

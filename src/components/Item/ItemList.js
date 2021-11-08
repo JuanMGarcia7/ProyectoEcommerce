@@ -29,8 +29,19 @@ const ItemList = () => {
     gettingData();
   }, []);
 
+  items.sort(function (a, b) {
+    if (a.category > b.category) {
+      return 1;
+    }
+    if (a.category < b.category) {
+      return -1;
+    }
+
+    // a must be equal to b
+    return 0;
+  });
   return (
-    <div>
+    <div className="cardsContainer">
       <h1 className="tituloPrincipal"> New arrivals!</h1>
       {items.map((prod) => {
         return (
