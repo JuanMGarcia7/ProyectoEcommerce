@@ -1,0 +1,38 @@
+/* .footer {
+  display: flex;
+  border-top: 1px solid #010101;
+  height: 200px;
+}
+.mapa {
+  width: 50%;
+  margin: auto;
+  padding: 2%;
+  border-right: 1px solid #010101;
+}
+.mapa-iframe {
+  display: flex;
+  margin: auto;
+}*/
+
+.datos-contacto {
+  width: 30%;
+  padding: 2%;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.datos-content {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  margin: 1%;
+}
+.img-contact {
+  height: 30px;
+}
+.imagenFoot {
+  height: 30px;
+}
+
+#imagenTel {
+  width: 30px;
+}

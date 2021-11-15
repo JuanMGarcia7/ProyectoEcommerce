@@ -3,11 +3,11 @@ import { addDoc, collection } from "@firebase/firestore";
 import "./Form.css";
 import { db } from "../../firebase";
 import swal from "sweetalert";
-import { Formik, useFormik } from "formik";
+import { useFormik } from "formik";
 import CartContext from "../Context/CartContext";
 
 const FormCompra = () => {
-  const [cart, setCart] = useContext(CartContext);
+  const [cart] = useContext(CartContext);
 
   const formik = useFormik({
     initialValues: {

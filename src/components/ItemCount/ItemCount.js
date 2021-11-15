@@ -1,5 +1,3 @@
-//JUAN
-
 import React, { useState } from "react";
 import "./ItemCount.css";
 import swal from "sweetalert";
@@ -48,22 +46,3 @@ const ItemCount = ({ stock, initialValue, onAdd }) => {
 };
 
 export default ItemCount;
-
-// quitar counter, fue para un tp
-/* const quitIC = () => {
-  let contador = document.getElementById("countGeneral");
-  contador.parentNode.removeChild(contador);
-
-  let buttonAgrCarrito = document.getElementById("agrCarrito");
-  buttonAgrCarrito.parentNode.removeChild(buttonAgrCarrito);
-}; 
-
-
-
-<div>
-        <button className="btnGral" id="agrCarrito" onClick={quitIC}>
-          {" "}
-          Agregar al carrito
-        </button>
-      </div>
-      */

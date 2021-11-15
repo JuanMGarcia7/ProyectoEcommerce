@@ -4,18 +4,17 @@ import Spinner from "../Spinner/Spinner";
 import { Link } from "react-router-dom";
 import "./itemList.css";
 
-//firebase
 import { db } from "../../firebase";
-import { collection, getDocs, where, query } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 
 const ItemList = () => {
   const [items, setItems] = useState([]);
-  const [isLoading, SetIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   console.log(items);
 
   useEffect(() => {
     setTimeout(() => {
-      SetIsLoading(false);
+      setIsLoading(false);
     }, 2000);
     const gettingData = async () => {
       const docs = [];
