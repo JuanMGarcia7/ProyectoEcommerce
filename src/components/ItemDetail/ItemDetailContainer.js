@@ -8,10 +8,11 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 
 const ItemDetailContainer = ({ match }) => {
-  let itemID = match.params.id;
+  const itemID = match.params.id;
   const [item, setItem] = useState([]);
   const [cantidadDeItems, setCantidadDeItems] = useState(1);
   const [cart, setCart] = useContext(CartContext);
+  const [stock, setStock] = useState();
 
   const counterHandler = (counter) => {
     setCantidadDeItems(counter);
@@ -21,6 +22,7 @@ const ItemDetailContainer = ({ match }) => {
     const getItem = async () => {
       const docRef = doc(db, "Products", itemID);
       const docSnap = await getDoc(docRef);
+      setStock(docSnap.data().stock);
 
       if (docSnap.exists()) {
         setItem({ ...docSnap.data(), id: docSnap.id });
@@ -28,6 +30,7 @@ const ItemDetailContainer = ({ match }) => {
         console.log("no esta!");
       }
     };
+
     getItem();
   });
 
@@ -68,8 +71,7 @@ const ItemDetailContainer = ({ match }) => {
               <div className="itemsContent">Nombre: {item.name}</div>
               <div className="itemsContent"> Disponibles: {item.stock}</div>
               <div className="itemsContent">
-                {""}
-                Precio: u$s {item.price * cantidadDeItems} por {cantidadDeItems}{" "}
+                Precio: u$s {item.price * cantidadDeItems} por {cantidadDeItems}
                 {cantidadDeItems > 1 ? "items" : "item"}
               </div>
             </div>
@@ -82,7 +84,7 @@ const ItemDetailContainer = ({ match }) => {
           </button>
         </div>
         <div className="cardFoot">
-          <ItemCount stock={5} initialValue={1} onAdd={counterHandler} />
+          <ItemCount stock={stock} initialValue={1} onAdd={counterHandler} />
           <Link className="btnGral" to="/cart">
             Finalizar compra
           </Link>
