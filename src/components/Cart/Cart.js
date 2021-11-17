@@ -7,8 +7,6 @@ import FormCompra from "../FormCompra/FormCompra";
 const Cart = () => {
   const [cart, setCart] = useContext(CartContext);
 
-  console.log(cart);
-
   const elminarItem = (item) => {
     cart.splice(
       cart.findIndex((i) => i.item === item.id),
@@ -62,9 +60,6 @@ const Cart = () => {
         )}
       </div>
       <div>{cart.length <= 0 ? null : <FormCompra />}</div>
-      {/*  <div>
-        <button className="btnEliminar">Comprar!</button>
-      </div> */}
     </div>
   );
 };

@@ -8,17 +8,21 @@
   margin: auto;
   padding: 2%;
   border-right: 1px solid #010101;
-}
+}*/
 .mapa-iframe {
   display: flex;
-  margin: auto;
-}*/
+  margin-left: 5%;
+}
 
 .datos-contacto {
-  width: 30%;
-  padding: 2%;
-  justify-content: flex-start;
+  margin-top: 3%;
+  width: 100%;
+  justify-content: flex-end;
   display: flex;
+  background-color: rgb(69, 76, 83);
+  height: 30px;
+  padding-bottom: 4%;
+  overflow: hidden;
 }
 
 .datos-content {

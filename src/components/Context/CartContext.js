@@ -12,6 +12,4 @@ export const CartProvider = ({ children }) => {
   );
 };
 
-/* Pasar las props aca */
-
 export default CartContext;

@@ -36,7 +36,6 @@ const ItemList = () => {
       return -1;
     }
 
-    // a must be equal to b
     return 0;
   });
   return (

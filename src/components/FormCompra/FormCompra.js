@@ -30,26 +30,6 @@ const FormCompra = () => {
     },
   });
 
-  /*   const upDatesInput = (e) => {
-    setInputValueName(e.target.value);
-  }; */
-  /*   const registrarCompra = async (e) => {
-    e.preventDefault();
-    const docRef = await addDoc(collection(db, "Compra"), {
-      name: inputValueName,
-      country: "Japan",
-    });
-    swal({
-      title: "Compra realizada!",
-      text: "ID de seguimiento: " + docRef.id,
-      icon: "success",
-      button: "Volver",
-    });
-
-    console.log("ID del ticketde compra: ", docRef.id);
-  };
-  console.log(inputValueName);
- */
   return (
     <div>
       <form onSubmit={formik.handleSubmit}>

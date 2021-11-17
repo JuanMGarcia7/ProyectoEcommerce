@@ -31,9 +31,7 @@ const NavBar = () => {
             <Link to="/" className="navegables navs">
               Home
             </Link>
-            {/* <Link to="/catalogo" className="navegables navs">
-              Catalogo
-            </Link> */}
+
             <Dropdown
               isOpen={dropdown}
               toggle={abrirCerrarDrop}
