@@ -10,7 +10,6 @@ import { collection, getDocs } from "firebase/firestore";
 const ItemList = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  console.log(items);
 
   useEffect(() => {
     setTimeout(() => {
